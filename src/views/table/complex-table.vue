@@ -213,6 +213,8 @@ export default {
     }
   },
   created() {
+    this.sch_order = this.$route.query.orderId
+    this.sch_status = +this.$route.query.status
     this._getPageTab2()
   },
   filters: {
@@ -251,7 +253,8 @@ export default {
       this.getPageData()
     },
     _getPageTab2() {
-      getPageTab2()
+      console.log(this.sch_order, this.sch_status, '???')
+      getPageTab2({ orderId: this.sch_order, status: this.sch_status })
         .then(res => {
           this.allList = res.data.tableList
           this.schArr = this.allList
