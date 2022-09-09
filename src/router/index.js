@@ -133,7 +133,8 @@ export const asyncRoutes = [
         path: 'complex-table',
         name: 'ComplexTable',
         component: () => import('@/views/table/complex-table'),
-        meta: { title: '复杂表格' }
+        // 也可以用keepAlive meta: { title: '复杂表格', keepAlive: false },
+        meta: { title: '复杂表格', noCache: true }
       }
     ]
   },

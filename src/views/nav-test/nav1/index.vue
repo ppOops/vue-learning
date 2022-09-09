@@ -29,6 +29,18 @@
       >
       </my-input>
     </el-card>
+
+    <el-card style="marginTop: 20px">
+      <h3>路由跳转</h3>
+      <router-link
+        :to="{
+          path: '/table/complex-table',
+          query: { orderId: '123', status: 1 }
+        }"
+        >复杂表单</router-link
+      >
+      <button @click="goToTable">复杂表单method跳转</button>
+    </el-card>
   </div>
 </template>
 
@@ -42,7 +54,6 @@ export default {
     LinksList,
     MyInput
   },
-  data() {},
   methods: {
     // 监听@hook监听子组件的生命周期
     doSomething() {
@@ -56,6 +67,16 @@ export default {
     },
     clickEvent() {
       console.log('click event')
+    },
+    goToTable() {
+      this.$router.push({
+        // path: '/table/complex-table',
+        name: 'ComplexTable', // name就是路由上配置的name属性
+        query: {
+          orderId: '123',
+          status: '2'
+        }
+      })
     }
   }
 }
