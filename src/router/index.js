@@ -159,6 +159,18 @@ export const asyncRoutes = [
         name: 'TableForm',
         component: () => import('@/views/form/table-form/table-form'),
         meta: { title: '表格表单' }
+      },
+      {
+        path: 'array-form-01',
+        name: 'ArrayForm01',
+        component: () => import('@/views/form/array-form/array-form01'),
+        meta: { title: '数组表单' }
+      },
+      {
+        path: 'array-form-02',
+        name: 'ArrayForm02',
+        component: () => import('@/views/form/array-form/array-form02'),
+        meta: { title: '数组表单' }
       }
     ]
   },
