@@ -208,14 +208,6 @@ export default {
         .catch(err => {
           console.log(err)
         })
-      // this.$refs[formName].validate(valid => {
-      //   if (valid) {
-      //     alert('submit!')
-      //   } else {
-      //     console.log('error submit!!')
-      //     return false
-      //   }
-      // })
     },
     toErrorField(formName) {
       this.$refs[formName].validate((valid, message) => {
@@ -229,8 +221,6 @@ export default {
           // 取第一个不通过的信息对象提示即可
           // this.$message.error(message[Object.keys(message)[0]][0].message)
           this.$nextTick(() => {
-            // const el = document.querySelectorAll('.el-form-item__error')[0]
-            // el.scrollIntoView({ block: 'center', behavior: 'smooth' })
             this.scrollToError()
           })
           return false

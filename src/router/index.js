@@ -162,9 +162,9 @@ export const asyncRoutes = [
       },
       {
         path: 'array-form-01',
-        name: 'ArrayForm01',
+        name: 'Array动态Form01',
         component: () => import('@/views/form/array-form/array-form01'),
-        meta: { title: '数组表单' }
+        meta: { title: 'Array动态Form01' }
       },
       {
         path: 'array-form-02',
